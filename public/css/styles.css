@@ -1,0 +1,64 @@
+/* ヘッダー */
+header {
+    display:flex;
+    background-color: lightgrey;
+}
+header div {
+    margin: 10px;
+}
+header div:first-child {
+    margin-right: auto;
+}
+
+/* wrapper */
+.wrapper {
+    height: auto;
+}
+
+/* サイドバー */
+.sidebar-container {
+    height: auto;
+    width: 30%;
+    float: left;
+}
+@media (max-width:800px) {
+    .sidebar-container {
+        display: none;
+    }
+}
+.sidebar-container ul {
+    text-align: center;
+    border: solid black;
+}
+.sidebar-container ul li {
+    margin: 2px 0;
+}
+.sidebar-container ul .top {
+    background-color: lightgrey;
+}
+
+/* メインコンテンツ */
+.maincontent-container {
+    height: auto;
+    width: 70%;
+    float: left;
+}
+@media (max-width:800px) {
+    .maincontent-container {
+        height: auto;
+        width: 100%;
+    }
+}
+.btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background: #668ad8;
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+  }
+  .btn:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+  }
