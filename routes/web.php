@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Homecontroller@index')->name('index');
+
+Route::get('/running', 'HomeController@showRunningPage')->name('running');
+Route::post('/running', 'HomeController@runningPage');
