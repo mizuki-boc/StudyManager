@@ -1,7 +1,7 @@
 function clock()
 {
   // 数字が 1ケタのとき、「0」を加えて 2ケタにする
-  var twoDigit =function(num){
+  var twoDigit = function(num){
     var digit
     if( num < 10 ){
       digit = "0" + num;

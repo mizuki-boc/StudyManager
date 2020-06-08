@@ -13,17 +13,11 @@
     </div>
     <!-- メインコンテンツ -->
     <div class="maincontent-container">
-        <div>
-            <a href="#" class="btn">Start</a>
-            <a href="#" class="btn">Stop</a>
-        </div>
-        <form action="{{ route('running') }}" method="GET">
-            <!-- 時刻部分 -->
-            <div id="clock_time"></div>
-            <!-- 日付部分 -->
-            <div id="clock_date"></div>
-            <button class="btn" type="submit">スタート</button>
-        </form>
+        <!-- 日付部分 -->
+        <div id="clock_date"></div>
+        <!-- 時刻部分 -->
+        <div id="clock_time"></div>
+        <a href="{{ route('running') }}" class="btn">スタート</a>
     </div>
 </div>
 @endsection

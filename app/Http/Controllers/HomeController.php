@@ -12,10 +12,9 @@ class HomeController extends Controller
     }
     public function showRunningPage()
     {
-        // ここで html タグ内の時刻を読み込む．
-        $tmp = '23:12';
+        $time = date("H:i:s", time());
         return view('runningPage', [
-            'time' => $tmp,
+            'time' => $time,
         ]);
     }
     public function runningPage()

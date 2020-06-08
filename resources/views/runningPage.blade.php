@@ -12,10 +12,12 @@
         </ul>
     </div>
     <!-- メインコンテンツ -->
-    <div>{{ $time }}</div>
+    <div>開始時刻 | {{ $time }}</div>
+    <a href="{{ route('index') }}" class="btn">戻る</a>
+    <div id="elapsed_time"></div>
 </div>
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('/js/clock.js') }}"></script>
+    <script src="{{ asset('/js/elapsed_time.js') }}"></script>
 @endsection
