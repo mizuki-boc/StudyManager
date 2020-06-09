@@ -56,9 +56,9 @@ header div:first-child {
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 3px;
-  }
-  .btn:active {
+}
+.btn:active {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);/*下に動く*/
     border-bottom: none;/*線を消す*/
-  }
+}

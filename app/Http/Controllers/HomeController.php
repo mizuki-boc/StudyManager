@@ -19,6 +19,7 @@ class HomeController extends Controller
     }
     public function runningPage()
     {
+        // $category = $request;
         return view('runningPage');
     }
 }

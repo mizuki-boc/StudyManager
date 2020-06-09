@@ -17,7 +17,13 @@
         <div id="clock_date"></div>
         <!-- 時刻部分 -->
         <div id="clock_time"></div>
-        <a href="{{ route('running') }}" class="btn">スタート</a>
+        <form action="post">
+            <a href="{{ route('running') }}" class="btn">スタート</a>
+            <select name="test" id="">
+                <option value="サンプル１">Python</option>
+                <option value="サンプル１">PHP</option>
+            </select>
+        </form>
     </div>
 </div>
 @endsection
