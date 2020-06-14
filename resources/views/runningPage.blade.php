@@ -12,7 +12,7 @@
         </ul>
     </div>
     <!-- メインコンテンツ -->
-    <div>開始時刻 | {{ $time }}</div>
+    <div>{{ $test }}</div>
     <a href="{{ route('index') }}" class="btn">終了</a>
     <div id="elapsed_time"></div>
 </div>

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('index');
 
-Route::get('/running', 'HomeController@showRunningPage')->name('running');
-Route::post('/running', 'HomeController@runningPage');
+// Route::get('/running', 'HomeController@showRunningPage')->name('running');
+Route::post('/running', 'HomeController@running');
 
 // Route::post('/running', 'HomeController@test');

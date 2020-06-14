@@ -10,16 +10,18 @@ class HomeController extends Controller
     {
         return view('index');
     }
-    public function showRunningPage()
+    public function showRunningpage(Request $request)
     {
-        $time = date("H:i:s", time());
+        $test = $request->input();
         return view('runningPage', [
-            'time' => $time,
+            'test' => $test,
         ]);
     }
-    public function runningPage()
+    public function running(Request $request)
     {
-        // $category = $request;
-        return view('runningPage');
+        $test = $request->input('test');
+        return view('runningPage', [
+            'test' => $test,
+        ]);
     }
 }
