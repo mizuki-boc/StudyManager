@@ -16,7 +16,18 @@
         <div>ログアウト</div>
     </header>
     <main>
-        @yield('content')
+        <div class="wrapper">
+            <!-- サイドバー -->
+            <div class="sidebar-container">
+                <ul>
+                    <li class="top">Menu</li>
+                    <li>Timer</li>
+                    <li>Edit</li>
+                    <li>History</li>
+                </ul>
+            </div>
+            @yield('content')
+        </div>
     </main>
     @yield('scripts')
 </body>
