@@ -8,7 +8,7 @@
 <form action="result" method="POST">
     @csrf
     <div id="elapsed_time"></div>
-    <button type="submit" class="btn">終了</button>
+    <button type="submit" class="btn">終了・保存</button>
 </form>
 
 @endsection

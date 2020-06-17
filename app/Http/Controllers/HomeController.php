@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Folder;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,11 +27,24 @@ class HomeController extends Controller
     }
     public function result(Request $request)
     {
-        $request->session()->put('end_time', date('H:i:s'));
+        // セッション情報から読み取り
+        $memo = $request->session()->get('memo');
+        //セッションに書き込み
+        $end_time = date('H:i:s');
+        $request->session()->put('end_time', $end_time);
+        //勉強時間の計算
         $elapsed_time = gmdate('H:i:s', strtotime($request->session()->get('end_time')) - strtotime($request->session()->get('start_time')));
 
+        //db に保存．
+        $folder = new Folder();
+        $folder->memo = $memo;
+        $folder->study_time = $elapsed_time;
+        $folder->start_time = $request->session()->get('start_time');
+        $folder->end_time = $end_time;
+        $folder->save();
+
         return view('result', [
-            'memo' => $request->session()->get('memo'),
+            'memo' => $memo,
             'elapsed_time' => $elapsed_time,
         ]);
     }
