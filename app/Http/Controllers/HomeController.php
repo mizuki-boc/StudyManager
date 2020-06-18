@@ -48,4 +48,12 @@ class HomeController extends Controller
             'elapsed_time' => $elapsed_time,
         ]);
     }
+    public function showHistory()
+    {
+        $folders = Folder::all();
+
+        return view('history', [
+            'folders' => $folders,
+        ]);
+    }
 }

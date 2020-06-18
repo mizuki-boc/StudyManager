@@ -12,6 +12,7 @@
         <input type="text" placeholder="勉強内容を記入してください．" name="memo">
         <button type="submit" class="btn">スタート</button>
     </form>
+    <a href="{{ route('history') }}" class="btn">履歴</a>
 </div>
 @endsection
 

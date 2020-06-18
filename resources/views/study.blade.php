@@ -11,6 +11,7 @@
     <button type="submit" class="btn">終了・保存</button>
 </form>
 
+
 @endsection
 
 @section('scripts')
