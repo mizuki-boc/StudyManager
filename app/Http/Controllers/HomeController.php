@@ -51,7 +51,7 @@ class HomeController extends Controller
     public function showHistory()
     {
         $folders = Folder::all();
-
+        
         return view('history', [
             'folders' => $folders,
         ]);

@@ -21,3 +21,5 @@ Route::post('/study', 'HomeController@study');
 Route::get('/result', 'HomeController@showResult')->name('result');
 
 Route::get('/history', 'HomeController@showHistory')->name('history');
+
+Route::get('/delete', 'HomeController@showDeleteForm')->name('delete');
