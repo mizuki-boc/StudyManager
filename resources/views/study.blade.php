@@ -5,12 +5,8 @@
 <!-- メインコンテンツ -->
 <div>内容 | {{ $memo }}</div>
 <div>開始時刻 | {{ $start_time }}</div>
-<form action="result" method="POST">
-    @csrf
-    <div id="elapsed_time"></div>
-    <button type="submit" class="btn">終了・保存</button>
-</form>
-<a href="{{ route('result') }}">結果にすすむ</a>
+<div id="elapsed_time"></div>
+<a href="{{ route('result') }}" class="btn">終了して勉強記録を保存する</a>
 
 @endsection
 

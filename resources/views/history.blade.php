@@ -17,7 +17,7 @@
                 <th>{{ $folder->start_time }}</th>
                 <th>{{ $folder->end_time }}</th>
                 <th>{{ $folder->study_time }}</th>
-                <th><a href="#">削除</a></th>
+                <th><a href="{{ route('delete', ['id' => $folder->id]) }}" onclick="return confirm('{{ $folder->memo }} を削除します．よろしいですか？')">削除</a></th>
             </tr>
         @endforeach
     </table>

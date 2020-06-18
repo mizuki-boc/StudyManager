@@ -56,4 +56,12 @@ class HomeController extends Controller
             'folders' => $folders,
         ]);
     }
+    public function showDeleteForm(int $id)
+    {
+        // $id を id にもつレコードを削除する．
+        $folder = Folder::destroy($id);
+        
+        // return view('delete');
+        return redirect()->route('history');
+    }
 }
