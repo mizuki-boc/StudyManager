@@ -6,6 +6,7 @@
     <table border="1">
         <tr>
             <th>メモ</th>
+            <th>実行日</th>
             <th>開始時刻</th>
             <th>終了時刻</th>
             <th>勉強時間</th>
@@ -14,6 +15,7 @@
         @foreach ($folders as $folder)
             <tr>
                 <th>{{ $folder->memo }}</th>
+                <th>{{ substr($folder->created_at, 0, 10) }}</th>
                 <th>{{ $folder->start_time }}</th>
                 <th>{{ $folder->end_time }}</th>
                 <th>{{ $folder->study_time }}</th>
