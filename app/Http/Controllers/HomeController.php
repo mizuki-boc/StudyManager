@@ -25,7 +25,7 @@ class HomeController extends Controller
             'start_time' => $request->session()->get('start_time'),
         ]);
     }
-    public function result(Request $request)
+    public function showResult(Request $request)
     {
         // セッション情報から読み取り
         $memo = $request->session()->get('memo');

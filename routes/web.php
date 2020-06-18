@@ -18,6 +18,6 @@ Route::get('/', 'HomeController@index')->name('index');
 
 Route::post('/study', 'HomeController@study');
 
-Route::post('/result', 'HomeController@result');
+Route::get('/result', 'HomeController@showResult')->name('result');
 
 Route::get('/history', 'HomeController@showHistory')->name('history');

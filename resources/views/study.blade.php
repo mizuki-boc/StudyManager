@@ -10,7 +10,7 @@
     <div id="elapsed_time"></div>
     <button type="submit" class="btn">終了・保存</button>
 </form>
-
+<a href="{{ route('result') }}">結果にすすむ</a>
 
 @endsection
 
