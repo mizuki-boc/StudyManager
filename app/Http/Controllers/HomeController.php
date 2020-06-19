@@ -41,6 +41,8 @@ class HomeController extends Controller
         $folder->study_time = $elapsed_time;
         $folder->start_time = $request->session()->get('start_time');
         $folder->end_time = $end_time;
+        // ここ
+        $folder->user_id = 1;
         $folder->save();
 
         return view('result', [

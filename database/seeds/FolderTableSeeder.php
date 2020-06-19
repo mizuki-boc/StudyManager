@@ -13,7 +13,9 @@ class FolderTableSeeder extends Seeder
      */
     public function run()
     {
+        $user = DB::table('users')->first();
         $memos = ['testmemo1', 'testmemo2', 'testmemo3'];
+
         foreach ($memos as $memo) {
             DB::table('folders')->insert([
                 'memo' => $memo,
@@ -22,6 +24,7 @@ class FolderTableSeeder extends Seeder
                 'end_time' => Carbon::now(),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
+                'user_id' => $user->id,
             ]);
         }
     }
