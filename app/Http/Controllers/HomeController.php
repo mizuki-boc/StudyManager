@@ -11,9 +11,9 @@ class HomeController extends Controller
     public $start_time;
     public $end_time;
 
-    public function index()
+    public function home()
     {
-        return view('index');
+        return view('home');
     }
     public function study(Request $request)
     {

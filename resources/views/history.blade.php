@@ -23,6 +23,6 @@
             </tr>
         @endforeach
     </table>
-    <a href="{{ route('index') }}" class="btn">トップへ戻る</a>
+    <a href="{{ route('home') }}" class="btn">トップへ戻る</a>
 </div>
 @endsection
