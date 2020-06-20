@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Folder;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -41,8 +43,7 @@ class HomeController extends Controller
         $folder->study_time = $elapsed_time;
         $folder->start_time = $request->session()->get('start_time');
         $folder->end_time = $end_time;
-        // ここ
-        $folder->user_id = 1;
+        $folder->user_id = Auth::id();
         $folder->save();
 
         return view('result', [
@@ -52,7 +53,7 @@ class HomeController extends Controller
     }
     public function showHistory()
     {
-        $folders = Folder::all();
+        $folders = Auth::user()->folders()->get();
         
         return view('history', [
             'folders' => $folders,

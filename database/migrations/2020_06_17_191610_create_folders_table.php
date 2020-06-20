@@ -20,6 +20,7 @@ class CreateFoldersTable extends Migration
             $table->string('study_time', 20);
             $table->string('start_time', 20);
             $table->string('end_time', 20);
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
