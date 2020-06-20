@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['middleware '=> 'auth'], function() {
+Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'HomeController@home')->name('home');
 
     Route::post('/study', 'HomeController@study');

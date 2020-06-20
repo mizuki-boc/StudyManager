@@ -12,12 +12,6 @@
 <body>
     <header>
         <div>Study Manager</div>
-        <div>USERNAME ,ようこそ!</div>
-        <!-- <a href="#" id="logout">ログアウト</a> -->
-        <!-- <form id="logout-form" action="{{ route('logout') }}" method="POST">
-            @csrf
-            <button type="submit">ログアウト</button>
-        </form> -->
         @if(Auth::check())
             <span class="my-navbar-item">ようこそ, {{ Auth::user()->name }}さん</span>
             ｜

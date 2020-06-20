@@ -44,7 +44,7 @@ class HomeController extends Controller
         $folder->start_time = $request->session()->get('start_time');
         $folder->end_time = $end_time;
         $folder->user_id = Auth::id();
-        $folder->save();
+        Auth::user()->folders()->save($folder);
 
         return view('result', [
             'memo' => $memo,
